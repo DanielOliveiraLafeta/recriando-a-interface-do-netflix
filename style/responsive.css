@@ -1,0 +1,22 @@
+@media screen and (max-width: 700px) {
+    header .container {
+        display: flex;
+        flex-direction: column;
+    }
+    .button {
+        width: 190px;
+        height: 60px;
+        margin-top: 5px;
+    }
+    
+}
+
+@media screen and (min-width: 1000px) {
+    .movie-description {
+        width: 50%;
+    }
+}
+/*
+colocar ação aos  botões - falta fazer
+refazer o layout - falta fazer
+*/

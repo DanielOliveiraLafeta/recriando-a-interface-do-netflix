@@ -1,0 +1,110 @@
+/* criando variaveis para cores predefinidas para a página */
+:root {
+    --red:#E50014;
+    --black:#141414;
+}
+
+/* reseta todas configurações predefinidas na DOM */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*evita romper o largura da caixa fazendo com que o elementos se espremam */
+}
+
+/* elementos base */
+body {
+    font-family: 'Arial', Times, serif;
+    background: var(--black);
+    color: white;
+}
+
+
+header .container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .logo{
+    margin-left: 5px;
+
+    font-size: 40px;
+    font-family: 'Arial Black', Times, serif;
+    color: var(--red);
+}
+
+header nav a {
+    margin-right: 10px;
+
+    text-decoration: none;
+    color: #AAA;
+}
+
+header nav a:hover {
+    color: #FFF;
+}
+
+/* filme principal */
+.main-movie {
+    height: 400px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* segue a mesma direção do flex-direction */
+    align-items: flex-start;
+
+    font-size: 16px;
+
+    background: linear-gradient(rgba(0,0,0,.50), rgba(0,0,0,.50)100%), url('/img/eternals.jpg'); /* linear-gradient adiciona uma camada de sombra para texto ficar legivel */
+    background-size: cover; /* pega a area de cobertura da caixa */
+}
+
+.movie-title {
+    margin-top: 15%;
+
+    font-size: 40px;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+}
+
+.main-movie .movie-description {
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+.button {
+    margin-right: 15px;
+    padding: 15px 15px;
+    
+    font-size: 12px;
+    
+    color: white;
+    background-color: rgba(0, 0, 0, .50);
+    border: none;
+    cursor: pointer;
+    transition: .3s ease all;
+}
+
+.button:hover {
+    color: var(--black);
+    background-color: white;  
+}
+
+.button i {
+    margin-right: 8px;
+}
+
+.main-movie .container {
+    width: 70%;
+}
+
+.box-filme {
+    width: 100%;
+    height: 100%;
+    
+    display: block;   
+}
+
+.movies-carousel {
+    margin-top: 5px;
+}
