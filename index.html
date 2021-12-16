@@ -18,10 +18,10 @@
       <div class="container">
         <h2 class="logo">NETFLIX</h2>
         <nav>
-          <a href="#">Inicio</a>
-          <a href="#">Séries</a>
-          <a href="#">Filmes</a>
-          <a href="#">Documentários</a>
+          <a href="/">Inicio</a>
+          <a href="#series">Séries</a>
+          <a href="#movies">Filmes</a>
+          <a href="#documentaries">Documentários</a>
         </nav>
       </div>
     </header>
@@ -29,7 +29,10 @@
     <main>
       <div class="main-movie">
         <div class="container">
-          <h3 class="movie-title">ETERNOS</h3>
+          <div class="movie-title">
+            <h3 class="movie-name">ETERNOS</h3>
+            
+          </div>
           <p class="movie-description">
             Após os eventos de Vingadores: Ultimato (2019), os Eternos, uma raça
             alienígena imortal criada pelos Celestiais que vivem em segredo na
@@ -40,11 +43,11 @@
         </div>
         <div class="buttons">
           <!-- toda nova div vai adotar o display-block -->
-          <button role="button" class="button">
+          <button role="button" id="watchNowBtn" class="button">
             <i class="fas fa-play"></i>
             ASSISTIR AGORA
           </button>
-          <button role="button" class="button">
+          <button role="button" id="detailsBtn" class="button">
             <i class="fas fa-info-circle"></i>
             MAIS INFORMAÇÕES
           </button>
@@ -87,6 +90,78 @@
       </div>
     </div>
 
+    <!-- watch now modal -->
+    <div id="watchNowModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5>ETERNOS - TRAILER</h5>
+          <a class="close" onclick="restartMovie()">&times;</a> 
+        </div>
+        <div class="modal-body">            
+          <iframe id="movie-trailer" src="https://youtube.com/embed/PJza3ZaFeAU">
+          </iframe>
+        </div>
+      </div>
+    </div>
+
+    <!-- details modal -->
+    <div id="detailsModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5>ETERNOS - DETALHES</h5>
+          <a class="close">&times;</a>    
+        </div>
+        <div class="modal-body">
+          <div class="movie-details">
+            <span>
+              <a href="#movies-12-age">
+                <span class="movie-age" title="Idade mínima">12</span>
+              </a> 
+            </span>
+            <span><i class="fas fa-calendar-day" title="Em cartaz"></i> 04/11/2021(BR)</span>  
+            <span><i class="far fa-clock" title="Duração"></i> 2h 37min</span> 
+            <span class="movie-gender">
+                Gênero
+              <a href="#movies-action">
+                <i class="fas fa-snowboarding" placeholder="Ação" title="Ação"></i>
+              </a>
+              <a href="#movies-adventure">
+                <i class="fas fa-hiking" placeholder="Aventura" title="Aventura"></i>
+              </a>
+              <a href="#movies-sci-fi">
+                <i class="fas fa-hand-spock" placeholder="Ficção científica" title="Ficção Científica"></i>
+              </a>
+            </span>
+            <div class="movie-percent">
+              
+            </div>
+          </div>
+          <p class="title">Diretores <hr></p>
+          <div class="grid-container-directors">
+            <div class="grid-item">Chloé Zhao</div>
+            <div class="grid-item">Jim Starlin</div>
+            <div class="grid-item">Matthew K. Firpo</div>
+            <div class="grid-item">Patrick Burleigh</div>
+            <div class="grid-item">Ryan Firpo</div>
+          </div>
+          <p class="title">Elenco <hr></p>
+          <div class="grid-container-actors">
+            <div class="grid-item">Gemma Chan</div>
+            <div class="grid-item">Richard Madden</div>
+            <div class="grid-item">Angelina Jolie</div>
+            <div class="grid-item">Kumail Nanjiani</div>
+            <div class="grid-item">Barry Keoghan</div>
+            <div class="grid-item">Lauren Ridloff</div>
+            <div class="grid-item">Lia McHugh</div>
+            <div class="grid-item">Brian Tyree Henry</div>
+            <div class="grid-item">Ma Dong-seok</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- js modal -->
+    <script src="js/modal.js"></script>
     <!--js fontawesome -->
     <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" data-auto-replace-svg="nest"></script>
     <!--js owl-->
